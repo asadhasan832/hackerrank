@@ -9,18 +9,18 @@ public class Solution {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int t = in.nextInt();
-        ArrayList<Integer> primes;
-        int k = Integer.MAX_VALUE - 2;
+        ArrayList<Long> primes;
+        long k = Long.MAX_VALUE - 2L;
         
         for(int a0 = 0; a0 < t; a0++){
             int n = in.nextInt();
-            primes = new ArrayList<Integer>(Arrays.asList(new Integer[]{2, 3}));
-            if(n == 1 || n == 2) {
-                System.out.println(n);
+            primes = new ArrayList<Long>(Arrays.asList(new Long[]{2L, 3L}));
+            if(n == 1L || n == 2L) {
+                System.out.println(primes.get(n-1));
                 continue;
             }
-            for(int i = 5; i <= k; i += 2) {
-                int sqrt = (int) Math.sqrt(i);
+            for(long i = 5; i <= k; i += 2) {
+                long sqrt = (long) Math.sqrt(i);
                 boolean is_prime = true;
                 //You only have to check that primes less than the square-root of a number
                 // divide it. If they do it is not a prime, or else it is.
