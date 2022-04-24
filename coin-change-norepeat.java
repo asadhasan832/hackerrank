@@ -9,7 +9,7 @@ class Result {
         if(sum == K) {
             //Local has combo
             System.out.println(local);
-            ways.add(local);
+            ways.add((Vector<Integer>)local.clone());
             waysn.set(waysn.get()+1);
         }
 
@@ -37,6 +37,7 @@ class Result {
         AtomicInteger waysn = new AtomicInteger(0);
 
         unique_combinations(0, 0, A, local, K, ways, waysn);
+        System.out.println(ways);
         System.out.println(ways.size());
         System.out.println(waysn);
     }
